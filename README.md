@@ -5,7 +5,7 @@
 （该插件有参考另外一个扩展程序的设计，如果想要更完美的功能，请移步[这里](https://chrome.google.com/webstore/detail/infinity-new-tab/dbfmnekepjoapopniengjbcpnbljalfg)）
 
 ### 基本功能展示
-![image](https://github.com/ljuyi/chrome-extension/tree/master/static/show.gif)
+![image](https://github.com/ljuyi/chrome-extension/blob/master/static/show.gif)
 （屏幕下面因为录制软件不能显示完整）
 
 ### 说明
