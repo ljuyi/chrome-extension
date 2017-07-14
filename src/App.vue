@@ -31,8 +31,8 @@
                 <li v-for="list in lists" class="list">
                   <a :href="list.url" target="_blank" :style="{color:textColor[Math.floor(Math.random()*textColor.length)]}">
                     <span class="title" :alt="list.url">{{list.title}}</span>
-                    <span class="close" @click="removeShuqian(list.id)">X</span>
                   </a>
+                  <span class="close" @click.stop="removeShuqian(list.id)">X</span>
                 </li>
               </ul>
             </div>
@@ -106,7 +106,8 @@ export default {
     },
     removeShuqian (id) {
       this.lists.forEach((list, index) => {
-        if (list.id = id) {
+        if (list.id === id) {
+          console.log(index, this.lists)
           this.lists.splice(index, 1)
         }
       })
@@ -121,22 +122,10 @@ export default {
         this.processNode(list)
       })
     })
-    console.log(chrome.history.HistoryItem)
   }
 }
 </script>
 <style>
-li {
-  list-style: none;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
 #app {
   position: relative;
   width: 100%;
@@ -173,7 +162,6 @@ body {
 .body {
   flex: 0 0 100%;
   padding: 100px 0;
-  display: flex;
   flex-direction: column;
   justify-content: space-around;
   transition: all 0.5s cubic-bezier(.77, .14, .16, .78);
@@ -183,6 +171,7 @@ body {
 
 .body .input .innerinput {
   position: relative;
+  top: 10%;
   width: 40%;
   height: 34px;
   margin: 0 auto;
@@ -296,7 +285,7 @@ body {
   height: 100%;
   line-height: 30px;
 }
-.tab-body .shuqian-body .bookmarks .list a span.close{
+.tab-body .shuqian-body .bookmarks .list span.close{
   display: none;
   position: absolute;
   right: 5px;
@@ -309,8 +298,9 @@ body {
   text-align: center;
   line-height: 20px;
   border-radius: 50%;
+  cursor: pointer;
 }
-.tab-body .shuqian-body .bookmarks .list:hover a span.close{
+.tab-body .shuqian-body .bookmarks .list:hover span.close{
   display: inline-block;
 }
 .bgMoveOut {
