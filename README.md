@@ -4,6 +4,9 @@
 一个chrome的起始页插件，可以获取到书签列表，点击小风车可以切换壁纸
 （该插件有参考另外一个扩展程序的设计，如果想要更完美的功能，请移步[这里](https://chrome.google.com/webstore/detail/infinity-new-tab/dbfmnekepjoapopniengjbcpnbljalfg)）
 
+### 基本功能展示
+![image](https://github.com/ljuyi/chrome-extension/tree/master/static/show.gif)
+
 ### 说明
 目前只支持google搜索，获取历史记录的功能还未开发
 
