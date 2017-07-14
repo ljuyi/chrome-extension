@@ -6,6 +6,7 @@
 
 ### 基本功能展示
 ![image](https://github.com/ljuyi/chrome-extension/tree/master/static/show.gif)
+（屏幕下面因为录制软件不能显示完整）
 
 ### 说明
 目前只支持google搜索，获取历史记录的功能还未开发
