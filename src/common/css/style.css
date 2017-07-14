@@ -1,0 +1,179 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot?t=1500013029649'); /* IE9*/
+  src: url('../font/iconfont.eot?t=1500013029649#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff?t=1500013029649') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf?t=1500013029649') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg?t=1500013029649#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bookmarks:before { content: "\e628"; }
+
+.icon-lishi:before { content: "\e624"; }
+
+.icon-sousuo:before { content: "\e60f"; }
+
+.icon-google:before { content: "\e832"; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#app{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+#bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    filter: blur(4px);
+    z-index: -1000;
+}
+.showTab{
+    position: absolute;
+    z-index: 10000;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background: #E74C3C;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    font-size: 22px;
+    box-shadow: #000 0 0 5px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(.77,.14,.16,.78);
+}
+.body{
+    flex: 0 0 100%;
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transition: all 0.5s cubic-bezier(.77,.14,.16,.78);
+    transform: translateX(0);
+    background-size: cover;
+}
+.body .input .innerinput{
+    position: relative;
+    width: 40%;
+    height: 34px;
+    margin: 0 auto;
+}
+.body .input .innerinput img{
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    z-index: 10;
+}
+.body .input input{
+    padding: 0 50px;
+    width: 100%;
+    height: 34px;
+    border: none;
+    border-radius: 16px;
+}
+.body .input input:focus{
+    outline: none;
+}
+.body .input .search{
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60px;
+    height: 100%;
+    border-radius: 0 17px 17px 0;
+    background: #2ECC71;
+    color: #fff;
+    text-align: center;
+    line-height: 34px;
+    font-size: 14px;
+    text-decoration: none;
+}
+.tab{
+    flex: 0 0 25%;
+    position: relative;
+    background: #fff;
+    transition: all 0.5s cubic-bezier(.77,.14,.16,.78);
+    transform: translateX(-300px)
+}
+.tab .select{
+    width: 100%;
+    height: 70px;
+    background: #2CCE71;
+}
+.tab .select span{
+    color: #fff;
+    line-height: 70px;
+}
+.slideTab-enter-to, .slideTab-leave{
+    transform: translateX(-300px)
+}
+.slideTab-enter, .slideTab-leave-to{
+    transform: translateX(0)
+}
+.bgMoveOut{
+    transform: translateX(-180px);
+}
+.body .list{
+    flex: 1;
+}
+.body .list ul{
+    display: flex;
+}
+.body .list ul li{
+    text-align: center;
+}
+.showTab.active{
+    right: 10px;
+    top: 5px;
+    transform: rotate(405deg) scale(0.8);
+}
+.fengche{
+    position: absolute;
+    bottom: 0;
+    right: 50px;
+    width: 40px;
+    height: 65px;
+    cursor: pointer;
+}
+.fengche img.active{
+    transition: all 0.5s cubic-bezier(.77,.14,.16,.78);
+    transform: rotate(360deg);
+}
+.fengche img{
+    position: absolute;
+    top: 0;
+    z-index: 3;
+}
+.fengche .fengchegan{
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    width: 5px;
+    height: 40px;
+    background: #AAA;
+    z-index: 2;
+}
